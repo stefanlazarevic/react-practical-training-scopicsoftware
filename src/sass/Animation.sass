@@ -1,0 +1,24 @@
+.slide-enter
+    transform: translateX(-30%)
+
+.slide-enter.slide-enter-active
+    transform: translateX(0)
+    transition: transform .5s ease-out
+
+.slide-leave
+    overflow: hidden
+    background: #f17777
+    *
+        display: none !important
+
+.slide-leave.slide-leave-active
+    padding: 0 15px
+    animation:
+        name: example;
+        duration: 1s;
+
+@keyframes example
+    from
+        height: 100px
+    to
+        height: 0

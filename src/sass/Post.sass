@@ -1,0 +1,36 @@
+.post
+    &:first-child
+        margin-top: 15px
+    position: relative
+    border: 1px solid silver
+    margin:
+        bottom: 15px
+    &__title
+        padding: 5px 15px
+        border-bottom: 1px solid silver
+    &__content
+        padding: 5px 15px
+        white-space: pre
+    &:hover
+        .post__actions
+            display: block
+
+.post__actions
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    button
+        cursor: pointer
+        border: none
+        width: 30px
+        height: 30px
+        font-size: 1.4em
+
+.post__edit
+    background: #e28833
+    color: white
+
+.post__remove
+    background: #c31313
+    color: white
