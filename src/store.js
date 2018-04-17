@@ -8,14 +8,14 @@ const initialStoreState = {
 
 const customMiddlewares = [thunk];
 
-const reduxDevToolsMiddleware = window.devToolsExtension && window.devToolsExtension();
+// const reduxDevToolsMiddleware = window.devToolsExtension && window.devToolsExtension();
 
 const store = createStore(
     PostReducer,
     initialStoreState,
     compose(
         applyMiddleware(...customMiddlewares),
-        reduxDevToolsMiddleware
+        // reduxDevToolsMiddleware
     ),
 );
 

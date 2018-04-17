@@ -56,12 +56,6 @@ module.exports = {
             name: 'vendor',
             filename: '[name].bundle.js',
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: mode === 'production',   // enable source maps to map errors (stack traces) to modules
-            output: {
-              comments: mode === 'production', // remove all comments
-            },
-        }),
         new ExtractTextPlugin({
             filename: 'app.css',
             disable: mode !== 'production',
@@ -70,7 +64,7 @@ module.exports = {
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3001,
-            proxy: '0.0.0.0',
+            proxy: '0.0.0.0:5000',
             files: [{
                 match: [
                     '**/*.html',
@@ -92,5 +86,6 @@ module.exports = {
         historyApiFallback: true,
         hot: true,
         host: '0.0.0.0',
+        port: 5000,
     },
 }
